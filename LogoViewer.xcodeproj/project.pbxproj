@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		728CE0B6234C8FF800C8ADEC /* DomainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728CE0B5234C8FF800C8ADEC /* DomainService.swift */; };
+		728CE0B8234C9DC800C8ADEC /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728CE0B7234C9DC800C8ADEC /* Logo.swift */; };
 		C9C38D89208F0E4900975B31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C38D88208F0E4900975B31 /* AppDelegate.swift */; };
 		C9C38D8B208F0E4900975B31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C38D8A208F0E4900975B31 /* ViewController.swift */; };
 		C9C38D8E208F0E4900975B31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C38D8C208F0E4900975B31 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		728CE0B5234C8FF800C8ADEC /* DomainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainService.swift; sourceTree = "<group>"; };
+		728CE0B7234C9DC800C8ADEC /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		C9C38D85208F0E4900975B31 /* LogoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C38D88208F0E4900975B31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9C38D8A208F0E4900975B31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,14 +58,48 @@
 		C9C38D87208F0E4900975B31 /* LogoViewer */ = {
 			isa = PBXGroup;
 			children = (
+				C9C38D9D208F10FF00975B31 /* Model */,
+				C9C38D9B208F10F000975B31 /* Controller */,
+				C9C38D9C208F10F900975B31 /* View */,
+				C9C38D9A208F10CE00975B31 /* Supporting Files */,
+			);
+			path = LogoViewer;
+			sourceTree = "<group>";
+		};
+		C9C38D9A208F10CE00975B31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				C9C38D88208F0E4900975B31 /* AppDelegate.swift */,
-				C9C38D8A208F0E4900975B31 /* ViewController.swift */,
-				C9C38D8C208F0E4900975B31 /* Main.storyboard */,
 				C9C38D8F208F0E4B00975B31 /* Assets.xcassets */,
 				C9C38D91208F0E4B00975B31 /* LaunchScreen.storyboard */,
 				C9C38D94208F0E4B00975B31 /* Info.plist */,
 			);
-			path = LogoViewer;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9C38D9B208F10F000975B31 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C9C38D8A208F0E4900975B31 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C9C38D9C208F10F900975B31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9C38D8C208F0E4900975B31 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9C38D9D208F10FF00975B31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				728CE0B5234C8FF800C8ADEC /* DomainService.swift */,
+				728CE0B7234C9DC800C8ADEC /* Logo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +134,7 @@
 				TargetAttributes = {
 					C9C38D84208F0E4900975B31 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -137,6 +176,8 @@
 			files = (
 				C9C38D8B208F0E4900975B31 /* ViewController.swift in Sources */,
 				C9C38D89208F0E4900975B31 /* AppDelegate.swift in Sources */,
+				728CE0B8234C9DC800C8ADEC /* Logo.swift in Sources */,
+				728CE0B6234C8FF800C8ADEC /* DomainService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +322,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LogoViewer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LogoViewer/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.LogoViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -298,14 +339,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LogoViewer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LogoViewer/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.LogoViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
